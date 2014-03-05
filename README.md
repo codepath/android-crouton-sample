@@ -28,7 +28,8 @@ Crouton.showText(this, R.string.simple_text_message, Style.INFO);
 Show styled text crouton alert:
 
 ```java
-Configuration croutonConfiguration = new Configuration.Builder().setDuration(2500).build();
+Configuration croutonConfiguration = new Configuration.Builder()
+    .setDuration(2500).build();
 Style style = new Style.Builder()
     .setBackgroundColorValue(Color.parseColor("#daffc0"))
     .setGravity(Gravity.CENTER_HORIZONTAL)
