@@ -19,7 +19,7 @@ See [this tutorial](http://www.grokkingandroid.com/useful-android-libraries-crou
 
 ## Quick Usage
 
-Show simple text crouton alert:
+Show simple text crouton alert based on string resource:
 
 ```java
 Crouton.showText(this, R.string.simple_text_message, Style.INFO);
@@ -28,25 +28,30 @@ Crouton.showText(this, R.string.simple_text_message, Style.INFO);
 Show styled text crouton alert:
 
 ```java
+// Define configuration options
 Configuration croutonConfiguration = new Configuration.Builder()
     .setDuration(2500).build();
+// Define custom styles for crouton
 Style style = new Style.Builder()
     .setBackgroundColorValue(Color.parseColor("#daffc0"))
     .setGravity(Gravity.CENTER_HORIZONTAL)
     .setConfiguration(croutonConfiguration)
     .setHeight(150)
     .setTextColorValue(Color.parseColor("#323a2c")).build();
+// Display notice with custom style and configuration
 Crouton.showText(this, R.string.styled_text_message, style);
 ```
 
 Show custom crouton alert:
 
 ```java
+// Inflate any custom view
 View customView = getLayoutInflater().inflate(R.layout.custom_crouton_layout, null);
+// Display the view just by calling "show"
 Crouton.show(this, customView);
 ```
 
-and `res/layout/custom_crouton_layout.xml` with:
+and `res/layout/custom_crouton_layout.xml` with the content for the notice:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -93,3 +98,5 @@ and `res/layout/custom_crouton_layout.xml` with:
 
 </LinearLayout>
 ```
+
+That's it!
