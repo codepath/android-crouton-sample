@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CroutonDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="show_simple_crouton">Show Simple Crouton</string>
+    <string name="show_custom_label">Show Custom Crouton</string>
+    <string name="simple_text_message">This is a simple crouton</string>
+     <string name="styled_text_message">This is a styled crouton</string>
+     <string name="styled_label_button">Show Styled Crouton</string>
+</resources>
