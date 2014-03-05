@@ -6,10 +6,12 @@ Displays the use of the [Crouton](https://github.com/keyboardsurfer/Crouton) lib
  * Styled crouton
  * Custom view crouton
  
-Screens:
+Demo:
 
 <img src="http://i.imgur.com/4aRRnAe.gif" width="350" />
-<br />
+
+Screens:
+
 <img src="http://i.imgur.com/QlbGZe8.png" width="350" />
 <img src="http://i.imgur.com/LtPAkoX.png" width="350" />
 
