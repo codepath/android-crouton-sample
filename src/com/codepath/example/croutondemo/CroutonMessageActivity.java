@@ -38,7 +38,7 @@ public class CroutonMessageActivity extends Activity {
 				.setConfiguration(croutonConfiguration)
 				.setHeight(150)
 				.setTextColorValue(Color.parseColor("#323a2c")).build();
-		Crouton.makeText(this, getString(R.string.styled_text_message), style).show();
+		Crouton.showText(this, R.string.styled_text_message, style);
 	}
 
 	public void onCustomNotice(View v) {

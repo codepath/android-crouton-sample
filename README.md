@@ -9,7 +9,84 @@ Displays the use of the [Crouton](https://github.com/keyboardsurfer/Crouton) lib
 Screens:
 
 <img src="http://i.imgur.com/4aRRnAe.gif" width="350" />
+<br />
 <img src="http://i.imgur.com/QlbGZe8.png" width="350" />
 <img src="http://i.imgur.com/LtPAkoX.png" width="350" />
 
 See [this tutorial](http://www.grokkingandroid.com/useful-android-libraries-crouton/) for more details.
+
+## Quick Usage
+
+Show simple text crouton alert:
+
+```java
+Crouton.showText(this, R.string.simple_text_message, Style.INFO);
+```
+
+Show styled text crouton alert:
+
+```java
+Configuration croutonConfiguration = new Configuration.Builder().setDuration(2500).build();
+Style style = new Style.Builder()
+    .setBackgroundColorValue(Color.parseColor("#daffc0"))
+    .setGravity(Gravity.CENTER_HORIZONTAL)
+    .setConfiguration(croutonConfiguration)
+    .setHeight(150)
+    .setTextColorValue(Color.parseColor("#323a2c")).build();
+Crouton.showText(this, R.string.styled_text_message, style);
+```
+
+Show custom crouton alert:
+
+```java
+View customView = getLayoutInflater().inflate(R.layout.custom_crouton_layout, null);
+Crouton.show(this, customView);
+```
+
+and `res/layout/custom_crouton_layout.xml` with:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c9dfff"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="15dp"  
+    android:paddingBottom="15dp" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_info" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:text="With More Information" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView1"
+            android:layout_marginLeft="10dp"
+            android:text="Custom Crouton"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+```
