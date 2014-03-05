@@ -12,7 +12,7 @@ Demo:
 
 Screens:
 
-<img src="http://i.imgur.com/QlbGZe8.png" width="350" />
+<img src="http://i.imgur.com/QlbGZe8.png" width="350" />&nbsp;
 <img src="http://i.imgur.com/LtPAkoX.png" width="350" />
 
 See [this tutorial](http://www.grokkingandroid.com/useful-android-libraries-crouton/) for more details.
