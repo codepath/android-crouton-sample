@@ -30,7 +30,7 @@ public class CroutonMessageActivity extends Activity {
 		Crouton.showText(this, R.string.simple_text_message, Style.INFO);
 	}
 
-	public void onStyledNotice(View v) {
+	public void onStyledNotice(View v) {		
 	    Configuration croutonConfiguration = new Configuration.Builder().setDuration(2500).build();
 		Style style = new Style.Builder()
 				.setBackgroundColorValue(Color.parseColor("#daffc0"))
